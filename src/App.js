@@ -1,22 +1,25 @@
-const user = {
-  name: 'Hedy Lamarr',
-  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-  imageSize: 90,
-};
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Digitalclock from './components/Digitalclock';
+import MarketInsights from './components/MarketInsights.jsx';
 
-export default function Profile() {
+function App() {
   return (
-    <>
-      <h1>{user.name}</h1>
-      <img
-        className="avatar"
-        src={user.imageUrl}
-        alt={'Photo of ' + user.name}
-        style={{
-          width: user.imageSize,
-          height: user.imageSize
-        }}
-      />
-    </>
+    <div className="bg-teal-50 min-h-screen flex flex-col font-serif">
+      {/* Header */}
+      <Header />
+
+      {/* Main Content */}
+      <main className="flex-1 pt-24 p-4">
+        <Digitalclock />
+        <MarketInsights />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
+
+export default App;
