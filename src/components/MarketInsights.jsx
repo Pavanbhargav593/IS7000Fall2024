@@ -10,6 +10,7 @@ function MarketInsights() {
     { symbol: 'AMZN', price: 135.76, change: '-1.12%' },
   ];
 
+
   const chartData = {
     labels: movers.map((mover) => mover.symbol),
     datasets: [
